@@ -8,7 +8,7 @@ const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const { language, toggleLanguage } = useLanguage();
-  const translations = language === "tr" ? tr : en;
+  const t = language === "tr" ? tr : en;
 
   useEffect(() => {
     const handleScroll = () => {
@@ -31,28 +31,26 @@ const Navbar = () => {
             <h1 className="logo-title">
               BD <span>Medikal</span>
             </h1>
-            <div className="logo-subtitle">
-              {language === "tr" ? "Sağlık Çözümleri" : "Healthcare Solutions"}
-            </div>
+            <div className="logo-subtitle">{t.logo.subtitle}</div>
           </div>
         </Link>
 
         <div className="nav-right">
           <div className={`nav-links ${isMenuOpen ? "active" : ""}`}>
             <Link to="/" onClick={() => setIsMenuOpen(false)}>
-              {translations.nav.home}
+              {t.nav.home}
             </Link>
             <Link to="/hakkimizda" onClick={() => setIsMenuOpen(false)}>
-              {translations.nav.about}
+              {t.nav.about}
             </Link>
             <Link to="/urunler" onClick={() => setIsMenuOpen(false)}>
-              {translations.nav.products}
+              {t.nav.products}
             </Link>
             <Link to="/hizmetler" onClick={() => setIsMenuOpen(false)}>
-              {translations.nav.services}
+              {t.nav.services}
             </Link>
             <Link to="/iletisim" onClick={() => setIsMenuOpen(false)}>
-              {translations.nav.contact}
+              {t.nav.contact}
             </Link>
           </div>
 

@@ -6,13 +6,35 @@ export const tr = {
     services: "Hizmetler",
     contact: "İletişim",
   },
+  logo: {
+    text: "BD Medikal",
+    alt: "BD Medikal Logo",
+    subtitle: "Sağlık Çözümleri",
+  },
   hero: {
     title: "Sağlık Sektöründe Güvenilir Çözüm Ortağınız",
+    subtitle: "Yenilikçi Medikal Teknolojileri",
     description:
       "15 yılı aşkın deneyimimiz ve 1000'den fazla başarılı vaka desteğimiz ile sağlık sektörüne yenilikçi çözümler sunuyoruz.",
-    buttons: {
-      discover: "Ürünlerimizi Keşfedin",
-      contact: "Bizimle İletişime Geçin",
+    ctaButton: "Bizimle İletişime Geçin",
+    exploreButton: "Ürünleri Keşfet",
+  },
+  stats: {
+    experience: {
+      number: "15+",
+      text: "Yıllık Deneyim",
+    },
+    cases: {
+      number: "1000+",
+      text: "Vaka Desteği",
+    },
+    products: {
+      number: "50+",
+      text: "Ürün Çeşidi",
+    },
+    hospitals: {
+      number: "100+",
+      text: "Ortak Hastane",
     },
   },
   products: {
@@ -24,14 +46,19 @@ export const tr = {
   footer: {
     description:
       "Sağlık sektöründe yenilikçi çözümler ve güvenilir sonuçlar sunan lider medikal teknoloji şirketi.",
-    quickLinks: "Hızlı Bağlantılar",
-    products: "Ürünler",
+    quickLinks: {
+      title: "Hızlı Bağlantılar",
+      technology: "Teknoloji",
+    },
+    products: {
+      title: "Ürünler",
+    },
     contact: {
       title: "İletişim",
       email: "Email",
       phone: "Telefon",
       address: "Adres",
     },
-    rights: "Tüm hakları saklıdır.",
+    copyright: "Tüm hakları saklıdır.",
   },
 };

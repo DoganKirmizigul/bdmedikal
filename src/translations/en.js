@@ -6,13 +6,35 @@ export const en = {
     services: "Services",
     contact: "Contact",
   },
+  logo: {
+    text: "BD Medical",
+    alt: "BD Medical Logo",
+    subtitle: "Healthcare Solutions",
+  },
   hero: {
     title: "Your Trusted Partner in Healthcare",
+    subtitle: "Innovative Medical Technologies",
     description:
       "With over 15 years of experience and support for more than 1,000 successful cases, we provide innovative solutions to the healthcare industry.",
-    buttons: {
-      discover: "Discover Our Products",
-      contact: "Contact Us",
+    ctaButton: "Contact Us",
+    exploreButton: "Explore Products",
+  },
+  stats: {
+    experience: {
+      number: "15+",
+      text: "Years Experience",
+    },
+    cases: {
+      number: "1000+",
+      text: "Cases Supported",
+    },
+    products: {
+      number: "50+",
+      text: "Product Types",
+    },
+    hospitals: {
+      number: "100+",
+      text: "Partner Hospitals",
     },
   },
   products: {
@@ -24,14 +46,19 @@ export const en = {
   footer: {
     description:
       "A leading medical technology company providing innovative solutions and reliable results in the healthcare sector.",
-    quickLinks: "Quick Links",
-    products: "Products",
+    quickLinks: {
+      title: "Quick Links",
+      technology: "Technology",
+    },
+    products: {
+      title: "Products",
+    },
     contact: {
       title: "Contact",
       email: "Email",
       phone: "Phone",
       address: "Address",
     },
-    rights: "All rights reserved.",
+    copyright: "All rights reserved.",
   },
 };

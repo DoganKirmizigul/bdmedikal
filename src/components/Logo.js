@@ -1,7 +1,13 @@
 import React from "react";
 import logo from "../assets/images/logo.png";
+import { useLanguage } from "../context/LanguageContext";
+import { tr } from "../translations/tr";
+import { en } from "../translations/en";
 
 function Logo() {
+  const { language } = useLanguage();
+  const t = language === "tr" ? tr : en;
+
   return (
     <div
       className="logo-container"
@@ -9,13 +15,13 @@ function Logo() {
     >
       <img
         src={logo}
-        alt="bdmedikal Logo"
-        style={{ height: "80px", width: "auto" }} // Logonun boyutunu artırdık
+        alt={t.logo.alt}
+        style={{ height: "80px", width: "auto" }}
       />
       <svg
-        width="200" // SVG genişliğini artırdık
+        width="200"
         height="50"
-        viewBox="0 0 250 50" // Görünüm kutusunu güncelledik
+        viewBox="0 0 250 50"
         xmlns="http://www.w3.org/2000/svg"
       >
         <text
@@ -23,10 +29,10 @@ function Logo() {
           y="40"
           fill="#32427d"
           fontFamily="Arial"
-          fontSize="40" // Yazı boyutunu artırdık
+          fontSize="40"
           fontWeight="bold"
         >
-          BD Medical
+          {t.logo.text}
         </text>
       </svg>
     </div>

@@ -6,7 +6,7 @@ import { en } from "../translations/en";
 
 const Products = () => {
   const { language } = useLanguage();
-  const translations = language === "tr" ? tr : en;
+  const t = language === "tr" ? tr : en;
 
   const products = [
     {
@@ -56,8 +56,8 @@ const Products = () => {
   return (
     <section className="products-family-section">
       <div className="section-header">
-        <h2>{translations.products.title}</h2>
-        <p>{translations.products.description}</p>
+        <h2>{t.products.title}</h2>
+        <p>{t.products.description}</p>
       </div>
 
       <div className="products-grid">
@@ -72,7 +72,7 @@ const Products = () => {
                 {product.description[language]}
               </p>
               <Link to={product.link} className="product-link">
-                {translations.products.details} →
+                {t.products.details} →
               </Link>
             </div>
           </div>
