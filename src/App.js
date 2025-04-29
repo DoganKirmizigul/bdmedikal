@@ -9,6 +9,7 @@ import { LanguageProvider } from "./context/LanguageContext";
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
+import Products from "./pages/Products";
 
 function App() {
   return (
@@ -18,8 +19,9 @@ function App() {
           <Navbar />
           <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/about" element={<About />} />
-            <Route path="/contact" element={<Contact />} />
+            <Route path="/hakkimizda" element={<About />} />
+            <Route path="/urunler" element={<Products />} />
+            <Route path="/iletisim" element={<Contact />} />
           </Routes>
           <Footer />
         </div>

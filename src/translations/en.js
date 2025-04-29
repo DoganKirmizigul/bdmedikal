@@ -15,7 +15,7 @@ export const en = {
     title: "Your Trusted Partner in Healthcare",
     subtitle: "Innovative Medical Technologies",
     description:
-      "With over 15 years of experience and support for more than 1,000 successful cases, we provide innovative solutions to the healthcare industry.",
+      "With over 25 years of experience and support for more than 1,000 successful cases, we provide innovative solutions to the healthcare industry.",
     ctaButton: "Contact Us",
     exploreButton: "Explore Products",
   },
