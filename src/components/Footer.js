@@ -57,18 +57,32 @@ const Footer = () => {
           <ul className="footer-contact">
             <li>
               <strong>{t.footer.contact.email}:</strong>
-              <a href="mailto:info@bdmedikal.com.tr"> info@bdmedikal.com.tr</a>
+              <a href="mailto:info@bdmedikal.com"> info@bdmedikal.com</a>
             </li>
             <li>
               <strong>{t.footer.contact.phone}:</strong>
-              <a href="tel:+902167888888"> +90 (216) 788 88 88</a>
+              <a href="tel:+902422277620"> +90 242 227 76 20</a>
+            </li>
+            <li>
+              <strong>Fax:</strong>
+              <a href="tel:+902422270410"> +90 242 227 04 10</a>
             </li>
             <li>
               <strong>{t.footer.contact.address}:</strong>
               <address>
-                Merkez Mah. Medikal Sk. No:123
-                <br />
-                34876 İstanbul, Türkiye
+                {language === "tr" ? (
+                  <>
+                    Kültür Mahallesi 3802 Sokak No: 7/B
+                    <br />
+                    Kepez, Antalya, Turkey
+                  </>
+                ) : (
+                  <>
+                    7/B, 3802 Street, Kultur District
+                    <br />
+                    Kepez, Antalya, Turkey
+                  </>
+                )}
               </address>
             </li>
           </ul>

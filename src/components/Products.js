@@ -12,44 +12,44 @@ const Products = () => {
     {
       id: 1,
       title: {
-        tr: "Embolic Protection Device",
-        en: "Embolic Protection Device",
+        tr: "Girişimsel Radyoloji",
+        en: "Interventional Radiology",
       },
       description: {
-        tr: "Karotis arter müdahalesi için geliştirilmiş, yenilikçi filtre tasarımı ile distal embolizasyona karşı güvenilir koruma sağlayan cihaz.",
-        en: "Advanced protection device for carotid artery intervention, providing reliable protection against distal embolization with its innovative filter design.",
+        tr: "En ileri teknoloji ürünleri ve piyasanın en kaliteli malzemeleriyle hizmet veriyoruz. Özellikle beyin anevrizması, inme tedavileri ve periferik arter hastalığı alanlarında, en güncel çözümleri sunuyoruz. Dünya çapında kendini kanıtlamış birden fazla marka seçeneğimizle her ihtiyaca özel ürün desteği sağlıyoruz.",
+        en: "We provide service with the most advanced technology products and highest quality materials in the market. We offer the latest solutions especially in brain aneurysm, stroke treatments and peripheral artery disease. With multiple globally proven brand options, we provide product support tailored to every need.",
       },
       image:
-        "https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&q=80",
-      link: "/urunler/embolic-protection",
+        "https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&fit=crop&q=80",
+      link: "/urunler/girisimsel-radyoloji",
     },
     {
       id: 2,
       title: {
-        tr: "Kardiyovasküler Stentler",
-        en: "Cardiovascular Stents",
+        tr: "Girişimsel Onkoloji",
+        en: "Interventional Oncology",
       },
       description: {
-        tr: "En son teknoloji ile üretilmiş, yüksek esneklik ve dayanıklılık sunan kardiyovasküler stent sistemleri.",
-        en: "State-of-the-art cardiovascular stent systems offering high flexibility and durability.",
+        tr: "Kanser tedavisinde devrim yaratan kriyoablasyon yöntemiyle tümörleri dondurarak, mikrodalga ablasyon yöntemiyle tümörleri yakarak kesin ve etkili sonuçlar sağlıyoruz. Dünyanın en prestijli markalarına ait cihazlarla güvenilir ve ileri teknoloji hizmet sunuyoruz. Birçok farklı bölgedeki tümörlerde yüksek başarı oranı elde ediyoruz. Girişimsel onkolojide sadece bir yöntemle sınırlı kalmıyor, farklı tedavi seçenekleriyle de hastalarımıza çözüm sunuyoruz. Amacımız, kanserle mücadelede en etkili ve modern yöntemleri ulaştırmak.",
+        en: "We provide precise and effective results by freezing tumors with the revolutionary cryoablation method and burning tumors with microwave ablation in cancer treatment. We offer reliable and advanced technology service with devices from the world's most prestigious brands. We achieve high success rates in tumors in many different regions. In interventional oncology, we are not limited to just one method, we also offer solutions to our patients with different treatment options. Our goal is to deliver the most effective and modern methods in the fight against cancer.",
       },
       image:
-        "https://images.unsplash.com/photo-1530026405186-ed1f139313f8?auto=format&fit=crop&q=80",
-      link: "/urunler/stentler",
+        "https://ysm-res.cloudinary.com/image/upload/v1/yms/prod/8d9718b5-44ea-472f-ab86-0db4a5811aee",
+      link: "/urunler/girisimsel-onkoloji",
     },
     {
       id: 3,
       title: {
-        tr: "Diagnostik Kateterler",
-        en: "Diagnostic Catheters",
+        tr: "Kalp ve Damar Cerrahisi & Kardiyoloji",
+        en: "Cardiovascular Surgery & Cardiology",
       },
       description: {
-        tr: "Hassas tanı ve tedavi için özel olarak tasarlanmış, yüksek performanslı diagnostik kateter çözümleri.",
-        en: "High-performance diagnostic catheter solutions specially designed for precise diagnosis and treatment.",
+        tr: "Kalp kapakları, tüm stent çeşitleri ve daha fazlası için en kapsamlı ürün portföyüne sahibiz. Alanında lider, dünya çapında tanınan markaların çözümleriyle hizmet veriyoruz. Her türlü girişimsel ve cerrahi ihtiyaca yönelik en kaliteli ürünleri sağlıyoruz. Kalp ve damar sağlığında güvenilirliği, teknolojiyi ve kaliteyi bir araya getiriyoruz. Sağlık profesyonellerine, her adımda en üst düzey desteği sunuyoruz.",
+        en: "We have the most comprehensive product portfolio for heart valves, all types of stents and more. We provide service with solutions from globally recognized, leading brands in the field. We provide the highest quality products for all kinds of interventional and surgical needs. We combine reliability, technology and quality in cardiovascular health. We provide healthcare professionals with the highest level of support at every step.",
       },
       image:
-        "https://images.unsplash.com/photo-1579154204601-01588f351e67?auto=format&fit=crop&q=80",
-      link: "/urunler/kateterler",
+        "https://dam.northwell.edu/m/790f0b92222eafc3/Drupal-web_LHH_Cardio_MG_047.jpg",
+      link: "/urunler/kalp-damar",
     },
   ];
 

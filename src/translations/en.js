@@ -21,7 +21,7 @@ export const en = {
   },
   stats: {
     experience: {
-      number: "15+",
+      number: "25+",
       text: "Years Experience",
     },
     cases: {
