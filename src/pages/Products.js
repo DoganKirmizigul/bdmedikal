@@ -80,29 +80,22 @@ const Products = () => {
       url: "https://chemosat.com",
     },
   ];
+
   return (
     <div className="products-page">
-      <section className="products-header">
-        <div className="products-header-content">
-          <div className="products-header-text">
-            <h1>
-              {language === "tr" ? (
-                <>
-                  Güvenilir <span>Ortaklarımız</span>
-                </>
-              ) : (
-                <>
-                  Our Trusted <span>Partners</span>
-                </>
-              )}
-            </h1>
-            <p>{t.partners.description}</p>
-          </div>
-          <div className="products-header-image">
-            <div className="header-shape-1"></div>
-            <div className="header-shape-2"></div>
-            <div className="header-shape-3"></div>
-          </div>
+      <section className="partner-hero">
+        <div className="partner-hero-content">
+          <h1>
+            {language === "tr"
+              ? "Güvenilir Ortaklarımız"
+              : "Our Trusted Partners"}
+          </h1>
+          <p>{t.partners.description}</p>
+        </div>
+        <div className="partner-hero-shapes">
+          <div className="hero-shape hero-shape-1"></div>
+          <div className="hero-shape hero-shape-2"></div>
+          <div className="hero-shape hero-shape-3"></div>
         </div>
       </section>
 
@@ -115,12 +108,14 @@ const Products = () => {
               target="_blank"
               rel="noopener noreferrer"
               className="partner-card"
+              aria-label={partner.name}
             >
               <div className="partner-logo-container">
                 <img
                   src={partner.logo}
                   alt={partner.name}
                   className="partner-logo"
+                  loading="lazy"
                 />
               </div>
             </a>
