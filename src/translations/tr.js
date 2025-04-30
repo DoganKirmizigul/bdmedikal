@@ -43,6 +43,12 @@ export const tr = {
       "Sağlık sektöründe yenilikçi ve güvenilir çözümler sunan geniş ürün yelpazemizi keşfedin.",
     details: "Detaylı Bilgi",
   },
+  partners: {
+    title: "Güvenilir Ortaklarımız",
+    description:
+      "En iyi sağlık kurumları ve kuruluşları ile işbirliği içinde en iyi medikal teknolojiyi sunuyoruz.",
+    details: "Detaylı Bilgi",
+  },
   footer: {
     description:
       "Sağlık sektöründe yenilikçi çözümler ve güvenilir sonuçlar sunan lider medikal teknoloji şirketi.",

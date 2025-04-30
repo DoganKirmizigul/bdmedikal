@@ -80,7 +80,6 @@ const Products = () => {
       url: "https://chemosat.com",
     },
   ];
-
   return (
     <div className="products-page">
       <section className="products-header">
@@ -89,15 +88,15 @@ const Products = () => {
             <h1>
               {language === "tr" ? (
                 <>
-                  Ürün <span>Ailemiz</span>
+                  Güvenilir <span>Ortaklarımız</span>
                 </>
               ) : (
                 <>
-                  Our Product <span>Family</span>
+                  Our Trusted <span>Partners</span>
                 </>
               )}
             </h1>
-            <p>{t.products.description}</p>
+            <p>{t.partners.description}</p>
           </div>
           <div className="products-header-image">
             <div className="header-shape-1"></div>

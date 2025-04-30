@@ -43,6 +43,12 @@ export const en = {
       "Explore our wide range of innovative and reliable solutions for the healthcare industry.",
     details: "Learn More",
   },
+  partners: {
+    title: "Our Trusted Partners",
+    description:
+      "We work with leading healthcare institutions and organizations to deliver excellence in medical technology.",
+    details: "Learn More",
+  },
   footer: {
     description:
       "A leading medical technology company providing innovative solutions and reliable results in the healthcare sector.",
