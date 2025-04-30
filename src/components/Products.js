@@ -12,16 +12,15 @@ const Products = () => {
     {
       id: 1,
       title: {
-        tr: "Girişimsel Radyoloji",
-        en: "Interventional Radiology",
+        tr: "Endovasküler Beyin Anevrizması Tedavisi",
+        en: "Endovascular Brain Aneurysm Treatment",
       },
       description: {
         tr: "En ileri teknoloji ürünleri ve piyasanın en kaliteli malzemeleriyle hizmet veriyoruz. Özellikle beyin anevrizması, inme tedavileri ve periferik arter hastalığı alanlarında, en güncel çözümleri sunuyoruz. Dünya çapında kendini kanıtlamış birden fazla marka seçeneğimizle her ihtiyaca özel ürün desteği sağlıyoruz.",
         en: "We provide service with the most advanced technology products and highest quality materials in the market. We offer the latest solutions especially in brain aneurysm, stroke treatments and peripheral artery disease. With multiple globally proven brand options, we provide product support tailored to every need.",
       },
-      image:
-        "https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&fit=crop&q=80",
-      link: "/urunler/girisimsel-radyoloji",
+      image: "https://www.sevs.com.au/files/mastheads/10-surgery.jpg",
+      link: "/urunler",
     },
     {
       id: 2,
@@ -35,7 +34,7 @@ const Products = () => {
       },
       image:
         "https://ysm-res.cloudinary.com/image/upload/v1/yms/prod/8d9718b5-44ea-472f-ab86-0db4a5811aee",
-      link: "/urunler/girisimsel-onkoloji",
+      link: "/urunler",
     },
     {
       id: 3,
@@ -49,7 +48,21 @@ const Products = () => {
       },
       image:
         "https://dam.northwell.edu/m/790f0b92222eafc3/Drupal-web_LHH_Cardio_MG_047.jpg",
-      link: "/urunler/kalp-damar",
+      link: "/urunler",
+    },
+    {
+      id: 4,
+      title: {
+        tr: "Genel Cerrahi",
+        en: "General Surgery",
+      },
+      description: {
+        tr: "Yara bakımı, yanık tedavisi ve genel cerrahi alanında dünyanın en kaliteli markalarıyla hizmet sunuyoruz. Her ihtiyaca özel, en güvenilir ve etkili ürünleri profesyonellerle buluşturuyoruz. Gelişmiş yara bakım çözümleriyle hızlı iyileşme ve maksimum hasta konforu sağlıyoruz. Yanık tedavisinde, en ileri teknoloji ürünleriyle fark yaratıyoruz. Genel cerrahide kaliteyi ve güveni standart haline getiriyoruz.",
+        en: "We provide services with the world's highest quality brands in wound care, burn treatment, and general surgery. We bring the most reliable and effective products tailored to every need to professionals. We ensure rapid healing and maximum patient comfort with advanced wound care solutions. We make a difference in burn treatment with the most advanced technology products. We make quality and trust the standard in general surgery.",
+      },
+      image:
+        "https://sankohastanesi.com.tr/upload/bolum/temp/Genel-cerrahi-3775_h1200.jpg",
+      link: "/urunler",
     },
   ];
 

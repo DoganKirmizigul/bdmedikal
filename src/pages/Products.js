@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useLanguage } from "../context/LanguageContext";
 import { tr } from "../translations/tr";
 import { en } from "../translations/en";
@@ -7,6 +7,10 @@ import "../styles/Products.css";
 const Products = () => {
   const { language } = useLanguage();
   const t = language === "tr" ? tr : en;
+
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }, []);
 
   const partners = [
     {
