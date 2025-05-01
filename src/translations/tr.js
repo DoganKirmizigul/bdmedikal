@@ -15,7 +15,7 @@ export const tr = {
     title: "Sağlık Sektöründe Güvenilir Çözüm Ortağınız",
     subtitle: "Yenilikçi Medikal Teknolojileri",
     description:
-      "25 yılı aşkın deneyimimiz ve 1000'den fazla başarılı vaka desteğimiz ile sağlık sektörüne yenilikçi çözümler sunuyoruz.",
+      "25 yılı aşkın deneyimimiz ve 10000'den fazla başarılı vaka desteğimiz ile sağlık sektörüne yenilikçi çözümler sunuyoruz.",
     ctaButton: "Bizimle İletişime Geçin",
     exploreButton: "Ürünleri Keşfet",
   },
