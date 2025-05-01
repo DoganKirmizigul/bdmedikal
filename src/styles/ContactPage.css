@@ -118,6 +118,7 @@
   border-radius: 12px;
   transition: all 0.3s ease;
   width: 100%;
+  color: inherit;
 }
 
 .bdm-contact-link:hover {
@@ -130,7 +131,7 @@
   box-shadow: 0 4px 12px rgba(66, 153, 225, 0.25);
 }
 
-.bdm-contact-link:hover .bdm-contact-details span {
+.bdm-contact-link:hover .bdm-contact-details p {
   color: #2b6cb0;
 }
 

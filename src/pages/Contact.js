@@ -104,17 +104,24 @@ function Contact() {
               </div>
 
               <div className="bdm-contact-item">
-                <div className="bdm-icon-wrapper">
-                  <FaMapMarkerAlt />
-                </div>
-                <div className="bdm-contact-details">
-                  <h3>{t.contact.address}</h3>
-                  <p>
-                    {t.contact.addressText.line1}
-                    <br />
-                    {t.contact.addressText.line2}
-                  </p>
-                </div>
+                <a
+                  href="https://maps.app.goo.gl/aNgahWVdgmNh4w5P9"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="bdm-contact-link"
+                >
+                  <div className="bdm-icon-wrapper">
+                    <FaMapMarkerAlt />
+                  </div>
+                  <div className="bdm-contact-details">
+                    <h3>{t.contact.address}</h3>
+                    <p>
+                      {t.contact.addressText.line1}
+                      <br />
+                      {t.contact.addressText.line2}
+                    </p>
+                  </div>
+                </a>
               </div>
             </div>
           </motion.div>
