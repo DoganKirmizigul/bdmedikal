@@ -1,0 +1,286 @@
+/* Modern Kurumsal Tasarım */
+.bdm-about-wrapper {
+  min-height: 100vh;
+  background: #f8fafc;
+  position: relative;
+  overflow: hidden;
+}
+
+.bdm-about-bg-pattern {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: radial-gradient(
+      circle at 20% 20%,
+      rgba(66, 153, 225, 0.05) 0%,
+      transparent 50%
+    ),
+    radial-gradient(
+      circle at 80% 80%,
+      rgba(49, 130, 206, 0.05) 0%,
+      transparent 50%
+    ),
+    linear-gradient(
+      135deg,
+      rgba(237, 242, 247, 0.7) 0%,
+      rgba(247, 250, 252, 0.7) 100%
+    );
+  z-index: 1;
+}
+
+.bdm-about-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 6rem 2rem;
+  position: relative;
+  z-index: 2;
+}
+
+/* Header Styling */
+.bdm-about-header {
+  text-align: center;
+  margin-bottom: 5rem;
+}
+
+.bdm-about-header h1 {
+  font-size: 3.8rem;
+  font-weight: 800;
+  background: linear-gradient(135deg, #2b6cb0 0%, #4299e1 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 1.5rem;
+  font-family: "Poppins", sans-serif;
+}
+
+.bdm-header-line {
+  height: 4px;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    #4299e1 50%,
+    transparent 100%
+  );
+  width: 150px;
+  margin: 0 auto;
+}
+
+/* Content Grid */
+.bdm-content-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  gap: 4rem;
+  align-items: start;
+}
+
+/* Left Content */
+.bdm-content-left {
+  position: sticky;
+  top: 2rem;
+}
+
+.bdm-year-badge {
+  display: inline-block;
+  background: linear-gradient(135deg, #2b6cb0 0%, #4299e1 100%);
+  color: white;
+  padding: 0.5rem 1.5rem;
+  border-radius: 50px;
+  font-weight: 600;
+  margin-bottom: 2rem;
+  box-shadow: 0 4px 15px rgba(66, 153, 225, 0.3);
+}
+
+.bdm-content-left h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #1a365d;
+  line-height: 1.3;
+  margin-bottom: 3rem;
+  white-space: pre-line;
+}
+
+.bdm-stats {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  margin-bottom: 2.5rem;
+}
+
+.bdm-stat-item {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.bdm-stat-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+}
+
+.bdm-stat-number {
+  display: block;
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: #2b6cb0;
+  margin-bottom: 0.5rem;
+}
+
+.bdm-stat-label {
+  color: #4a5568;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+/* Contact Button */
+.bdm-contact-button-wrapper {
+  margin-top: 2rem;
+}
+
+.bdm-contact-button {
+  display: inline-block;
+  background: linear-gradient(135deg, #2b6cb0 0%, #4299e1 100%);
+  color: white;
+  padding: 1rem 2rem;
+  border-radius: 50px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(66, 153, 225, 0.3);
+}
+
+.bdm-contact-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(66, 153, 225, 0.4);
+  background: linear-gradient(135deg, #2d3748 0%, #2b6cb0 100%);
+}
+
+/* Right Content */
+.bdm-info-card {
+  background: white;
+  border-radius: 24px;
+  padding: 3rem;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.05);
+  position: relative;
+}
+
+.bdm-info-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 8px;
+  background: linear-gradient(90deg, #2b6cb0, #4299e1);
+  border-radius: 24px 24px 0 0;
+}
+
+.bdm-card-section {
+  display: flex;
+  gap: 2rem;
+  padding: 2rem 0;
+}
+
+.bdm-card-section:not(:last-child) {
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.bdm-icon-wrapper {
+  flex-shrink: 0;
+  width: 56px;
+  height: 56px;
+  background: linear-gradient(135deg, #ebf8ff 0%, #bee3f8 100%);
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  color: #2b6cb0;
+  transition: transform 0.3s ease;
+}
+
+.bdm-card-section:hover .bdm-icon-wrapper {
+  transform: scale(1.1) rotate(5deg);
+}
+
+.bdm-card-section p {
+  margin: 0;
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #4a5568;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .bdm-content-grid {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+
+  .bdm-content-left {
+    position: static;
+    text-align: center;
+  }
+
+  .bdm-stats {
+    max-width: 500px;
+    margin: 0 auto 2.5rem auto;
+  }
+
+  .bdm-contact-button-wrapper {
+    text-align: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .bdm-about-container {
+    padding: 4rem 1.5rem;
+  }
+
+  .bdm-about-header h1 {
+    font-size: 2.8rem;
+  }
+
+  .bdm-content-left h2 {
+    font-size: 2rem;
+  }
+
+  .bdm-info-card {
+    padding: 2rem;
+  }
+
+  .bdm-card-section {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  .bdm-stats {
+    grid-template-columns: 1fr;
+  }
+
+  .bdm-contact-button {
+    width: 100%;
+    text-align: center;
+    padding: 1.2rem 2rem;
+  }
+}
+
+/* Animations */
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+.bdm-year-badge {
+  animation: float 4s ease-in-out infinite;
+}

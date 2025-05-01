@@ -19,6 +19,31 @@ export const tr = {
     ctaButton: "Bizimle İletişime Geçin",
     exploreButton: "Ürünleri Keşfet",
   },
+  about: {
+    yearBadge: "2007'den beri",
+    title: "Medikal Teknolojide\nGüvenilir Çözüm Ortağınız",
+    stats: {
+      experience: {
+        number: "25+",
+        text: "Yıllık Deneyim",
+      },
+      projects: {
+        number: "1000+",
+        text: "Başarılı Proje",
+      },
+    },
+    sections: [
+      {
+        text: "2007 yılında kurulan BD Medikal, girişimsel radyoloji, kardiyoloji, kalp damar cerrahisi, genel cerrahi ve onkoloji alanlarında uzmanlaşmış, Türkiye'nin önde gelen medikal firmalarından biridir. Kuruluşundan bu yana, sağlık sektörüne yenilikçi ve güvenilir çözümler sunarak güçlü bir konum edinmiştir.",
+      },
+      {
+        text: "Geniş ürün yelpazemiz ve sağlam tedarik altyapımızla, Türkiye genelindeki birçok özel ve kamu hastanesine kesintisiz hizmet veriyoruz. Sürekli gelişen teknolojiye hızla adapte olarak, sektörün ihtiyaçlarına yönelik etkili ve kalıcı çözümler sunmayı sürdürüyoruz.",
+      },
+      {
+        text: "BD Medikal, medikal teknolojilerde kalite, güven ve sürdürülebilirliği esas alarak, sağlık sektörünün güvenilir çözüm ortağı olma vizyonuyla çalışmalarına devam etmektedir.",
+      },
+    ],
+  },
   stats: {
     experience: {
       number: "25+",

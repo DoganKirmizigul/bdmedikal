@@ -19,6 +19,31 @@ export const en = {
     ctaButton: "Contact Us",
     exploreButton: "Explore Products",
   },
+  about: {
+    yearBadge: "Since 2007",
+    title: "Your Trusted Partner in\nMedical Technology",
+    stats: {
+      experience: {
+        number: "25+",
+        text: "Years Experience",
+      },
+      projects: {
+        number: "1000+",
+        text: "Successful Projects",
+      },
+    },
+    sections: [
+      {
+        text: "Founded in 2007, BD Medical is one of Turkey's leading medical companies, specializing in interventional radiology, cardiology, cardiovascular surgery, general surgery, and oncology. Since its establishment, we have achieved a strong position by providing innovative and reliable solutions to the healthcare sector.",
+      },
+      {
+        text: "With our wide range of products and robust supply infrastructure, we provide uninterrupted service to many private and public hospitals throughout Turkey. We continue to provide effective and lasting solutions to the needs of the sector by rapidly adapting to continuously evolving technology.",
+      },
+      {
+        text: "BD Medical continues its operations with the vision of being a reliable solution partner in the healthcare sector, based on quality, trust, and sustainability in medical technologies.",
+      },
+    ],
+  },
   stats: {
     experience: {
       number: "25+",
