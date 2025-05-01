@@ -92,4 +92,15 @@ export const tr = {
     },
     copyright: "Tüm hakları saklıdır.",
   },
+  contact: {
+    phone: "Telefon",
+    address: "Adres",
+    form: {
+      name: "Adınız Soyadınız",
+      email: "E-posta Adresiniz",
+      subject: "Konu",
+      message: "Mesajınız",
+      submit: "Mesaj Gönder",
+    },
+  },
 };

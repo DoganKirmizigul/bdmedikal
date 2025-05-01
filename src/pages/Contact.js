@@ -1,84 +1,21 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
-import { ToastContainer, toast } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
+import { FaEnvelope, FaPhone, FaFax, FaMapMarkerAlt } from "react-icons/fa";
+import { useLanguage } from "../context/LanguageContext";
+import { tr } from "../translations/tr";
+import { en } from "../translations/en";
+import "../styles/ContactPage.css";
+import contactPattern from "../assets/contact-pattern.svg";
 
 function Contact() {
+  const { language } = useLanguage();
+  const t = language === "tr" ? tr : en;
   const [formData, setFormData] = useState({
     name: "",
     email: "",
     subject: "",
     message: "",
   });
-
-  const [status, setStatus] = useState({
-    submitting: false,
-    submitted: false,
-    error: null,
-  });
-
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    setStatus({ submitting: true, submitted: false, error: null });
-
-    try {
-      const response = await fetch(
-        "https://neurovasc.onrender.com/api/send-email",
-        {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify(formData),
-        }
-      );
-
-      if (!response.ok) {
-        const errorData = await response.json();
-        throw new Error(errorData.details || "Failed to send email");
-      }
-
-      setStatus({
-        submitting: false,
-        submitted: true,
-        error: null,
-      });
-
-      toast.success("Mesajınız başarıyla gönderildi!", {
-        position: "top-right",
-        autoClose: 3000,
-        hideProgressBar: false,
-        closeOnClick: true,
-        pauseOnHover: true,
-        draggable: true,
-        progress: undefined,
-      });
-
-      setFormData({
-        name: "",
-        email: "",
-        subject: "",
-        message: "",
-      });
-    } catch (error) {
-      console.error("Error details:", error);
-      setStatus({
-        submitting: false,
-        submitted: false,
-        error: error.message || "Failed to send email. Please try again.",
-      });
-
-      toast.error("Mesaj gönderilemedi. Lütfen tekrar deneyin.", {
-        position: "top-right",
-        autoClose: 3000,
-        hideProgressBar: false,
-        closeOnClick: true,
-        pauseOnHover: true,
-        draggable: true,
-        progress: undefined,
-      });
-    }
-  };
 
   const handleChange = (e) => {
     setFormData({
@@ -87,158 +24,154 @@ function Contact() {
     });
   };
 
-  return (
-    <div className="page-container">
-      <ToastContainer
-        position="top-right"
-        autoClose={3000}
-        hideProgressBar={false}
-        newestOnTop={false}
-        closeOnClick
-        rtl={false}
-        pauseOnFocusLoss
-        draggable
-        pauseOnHover
-        theme="light"
-      />
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    // Form submission logic here
+    console.log(formData);
+  };
 
-      <div className="contact-hero">
-        <motion.h1
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
-        >
-          Get in Touch
-        </motion.h1>
-        <motion.p
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 0.2 }}
-          className="contact-subtitle"
-        >
-          We're Here to Help You
-        </motion.p>
+  return (
+    <div className="bdm-contact-wrapper">
+      <div className="bdm-contact-bg-pattern">
+        <img src={contactPattern} alt="" className="contact-pattern-image" />
       </div>
 
-      <div className="contact-content">
-        <div className="contact-info-grid">
-          <motion.div
-            className="contact-info-card"
-            initial={{ opacity: 0, x: -20 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.5, delay: 0.3 }}
-          >
-            <div className="contact-icon">📍</div>
-            <h3>Address</h3>
-            <p>RH12 3XX Horsham, West Sussex, England</p>
-          </motion.div>
-
-          <motion.div
-            className="contact-info-card"
-            initial={{ opacity: 0, x: -20 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.5, delay: 0.4 }}
-          >
-            <div className="contact-icon">📧</div>
-            <h3>Email</h3>
-            <p>info@neurovasc.com</p>
-          </motion.div>
-
-          <motion.div
-            className="contact-info-card"
-            initial={{ opacity: 0, x: -20 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.5, delay: 0.5 }}
-          >
-            <div className="contact-icon">📞</div>
-            <h3>Phone</h3>
-            <p>07976 888630</p>
-          </motion.div>
-        </div>
-
+      <div className="bdm-contact-container">
         <motion.div
-          className="contact-form-container"
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 0.6 }}
+          className="bdm-contact-header"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 1 }}
         >
-          <h2>Send us a Message</h2>
-          <form onSubmit={handleSubmit} className="contact-form">
-            <div className="form-row">
+          <motion.h1
+            initial={{ y: -30, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            transition={{ delay: 0.3, duration: 0.8 }}
+          >
+            {t.nav.contact}
+          </motion.h1>
+          <motion.div
+            className="bdm-header-line"
+            initial={{ width: 0 }}
+            animate={{ width: "100%" }}
+            transition={{ delay: 0.5, duration: 0.8 }}
+          ></motion.div>
+        </motion.div>
+
+        <div className="bdm-contact-grid">
+          <motion.div
+            className="bdm-contact-info"
+            initial={{ x: -50, opacity: 0 }}
+            animate={{ x: 0, opacity: 1 }}
+            transition={{ delay: 0.6, duration: 0.8 }}
+          >
+            <div className="bdm-info-card">
+              <div className="bdm-contact-item">
+                <a
+                  href="mailto:info@bdmedikal.com"
+                  className="bdm-contact-link"
+                >
+                  <div className="bdm-icon-wrapper">
+                    <FaEnvelope />
+                  </div>
+                  <div className="bdm-contact-details">
+                    <h3>Email</h3>
+                    <span>info@bdmedikal.com</span>
+                  </div>
+                </a>
+              </div>
+
+              <div className="bdm-contact-item">
+                <a href="tel:+902422277620" className="bdm-contact-link">
+                  <div className="bdm-icon-wrapper">
+                    <FaPhone />
+                  </div>
+                  <div className="bdm-contact-details">
+                    <h3>{t.contact.phone}</h3>
+                    <span>+90 242 227 76 20</span>
+                  </div>
+                </a>
+              </div>
+
+              <div className="bdm-contact-item">
+                <div className="bdm-icon-wrapper">
+                  <FaFax />
+                </div>
+                <div className="bdm-contact-details">
+                  <h3>Fax</h3>
+                  <span>+90 242 227 04 10</span>
+                </div>
+              </div>
+
+              <div className="bdm-contact-item">
+                <div className="bdm-icon-wrapper">
+                  <FaMapMarkerAlt />
+                </div>
+                <div className="bdm-contact-details">
+                  <h3>{t.contact.address}</h3>
+                  <p>
+                    7/B, 3802 Street, Kultur District
+                    <br />
+                    Kepez, Antalya, Turkey
+                  </p>
+                </div>
+              </div>
+            </div>
+          </motion.div>
+
+          <motion.div
+            className="bdm-contact-form"
+            initial={{ x: 50, opacity: 0 }}
+            animate={{ x: 0, opacity: 1 }}
+            transition={{ delay: 0.8, duration: 0.8 }}
+          >
+            <form onSubmit={handleSubmit}>
               <div className="form-group">
-                <label htmlFor="name">Full Name</label>
                 <input
                   type="text"
-                  id="name"
                   name="name"
+                  placeholder={t.contact.form.name}
                   value={formData.name}
                   onChange={handleChange}
                   required
-                  placeholder="John Doe"
                 />
               </div>
-
               <div className="form-group">
-                <label htmlFor="email">Email</label>
                 <input
                   type="email"
-                  id="email"
                   name="email"
+                  placeholder={t.contact.form.email}
                   value={formData.email}
                   onChange={handleChange}
                   required
-                  placeholder="john@example.com"
                 />
               </div>
-            </div>
-
-            <div className="form-group">
-              <label htmlFor="subject">Subject</label>
-              <input
-                type="text"
-                id="subject"
-                name="subject"
-                value={formData.subject}
-                onChange={handleChange}
-                required
-                placeholder="How can we help you?"
-              />
-            </div>
-
-            <div className="form-group">
-              <label htmlFor="message">Message</label>
-              <textarea
-                id="message"
-                name="message"
-                value={formData.message}
-                onChange={handleChange}
-                required
-                placeholder="Write your message here..."
-                rows="5"
-              />
-            </div>
-
-            <motion.button
-              type="submit"
-              className="submit-button"
-              whileHover={{ scale: 1.02 }}
-              whileTap={{ scale: 0.98 }}
-              disabled={status.submitting}
-            >
-              {status.submitting ? "Sending..." : "Send Message"}
-            </motion.button>
-
-            {status.submitted && (
-              <div className="success-message">
-                Message sent successfully! We'll get back to you soon.
+              <div className="form-group">
+                <input
+                  type="text"
+                  name="subject"
+                  placeholder={t.contact.form.subject}
+                  value={formData.subject}
+                  onChange={handleChange}
+                  required
+                />
               </div>
-            )}
-
-            {status.error && (
-              <div className="error-message">{status.error}</div>
-            )}
-          </form>
-        </motion.div>
+              <div className="form-group message-group">
+                <textarea
+                  name="message"
+                  placeholder={t.contact.form.message}
+                  value={formData.message}
+                  onChange={handleChange}
+                  required
+                  rows="8"
+                ></textarea>
+              </div>
+              <button type="submit" className="bdm-submit-button">
+                {t.contact.form.submit}
+              </button>
+            </form>
+          </motion.div>
+        </div>
       </div>
     </div>
   );

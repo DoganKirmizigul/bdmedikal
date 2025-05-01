@@ -10,6 +10,7 @@ import { useLanguage } from "../context/LanguageContext";
 import { tr } from "../translations/tr";
 import { en } from "../translations/en";
 import "../styles/AboutPage.css";
+import aboutPattern from "../assets/about-pattern.svg";
 
 function About() {
   const { language } = useLanguage();
@@ -17,7 +18,9 @@ function About() {
 
   return (
     <div className="bdm-about-wrapper">
-      <div className="bdm-about-bg-pattern"></div>
+      <div className="bdm-about-bg-pattern">
+        <img src={aboutPattern} alt="" className="about-pattern-image" />
+      </div>
 
       <div className="bdm-about-container">
         <motion.div

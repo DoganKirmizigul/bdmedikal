@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import "./App.css";
 import Footer from "./components/Footer";
 import Navbar from "./components/Navbar";
+import ScrollToTop from "./components/ScrollToTop";
 import { LanguageProvider } from "./context/LanguageContext";
 
 // Sayfaları import edelim
@@ -16,6 +17,7 @@ function App() {
     <LanguageProvider>
       <Router>
         <div className="App">
+          <ScrollToTop />
           <Navbar />
           <Routes>
             <Route path="/" element={<Home />} />

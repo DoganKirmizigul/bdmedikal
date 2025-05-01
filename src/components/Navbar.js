@@ -46,9 +46,6 @@ const Navbar = () => {
             <Link to="/urunler" onClick={() => setIsMenuOpen(false)}>
               {t.nav.products}
             </Link>
-            <Link to="/hizmetler" onClick={() => setIsMenuOpen(false)}>
-              {t.nav.services}
-            </Link>
             <Link to="/iletisim" onClick={() => setIsMenuOpen(false)}>
               {t.nav.contact}
             </Link>

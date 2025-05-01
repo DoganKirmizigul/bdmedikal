@@ -92,4 +92,15 @@ export const en = {
     },
     copyright: "All rights reserved.",
   },
+  contact: {
+    phone: "Phone",
+    address: "Address",
+    form: {
+      name: "Full Name",
+      email: "Email Address",
+      subject: "Subject",
+      message: "Your Message",
+      submit: "Send Message",
+    },
+  },
 };
