@@ -50,11 +50,11 @@ export const tr = {
       text: "Yıllık Deneyim",
     },
     cases: {
-      number: "1000+",
+      number: "10000+",
       text: "Vaka Desteği",
     },
     products: {
-      number: "50+",
+      number: "1000+",
       text: "Ürün Çeşidi",
     },
     hospitals: {
@@ -95,6 +95,10 @@ export const tr = {
   contact: {
     phone: "Telefon",
     address: "Adres",
+    addressText: {
+      line1: "7/B, 3802 Sokak, Kültür Mahallesi",
+      line2: "Kepez, Antalya, Türkiye",
+    },
     form: {
       name: "Adınız Soyadınız",
       email: "E-posta Adresiniz",

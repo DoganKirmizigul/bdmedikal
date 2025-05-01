@@ -12,8 +12,8 @@ const Products = () => {
     {
       id: 1,
       title: {
-        tr: "Endovasküler Beyin Anevrizması Tedavisi",
-        en: "Endovascular Brain Aneurysm Treatment",
+        tr: "Girişimsel Radyoloji",
+        en: "Interventional Radiology",
       },
       description: {
         tr: "En ileri teknoloji ürünleri ve piyasanın en kaliteli malzemeleriyle hizmet veriyoruz. Özellikle beyin anevrizması, inme tedavileri ve periferik arter hastalığı alanlarında, en güncel çözümleri sunuyoruz. Dünya çapında kendini kanıtlamış birden fazla marka seçeneğimizle her ihtiyaca özel ürün desteği sağlıyoruz.",

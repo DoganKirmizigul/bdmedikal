@@ -110,9 +110,9 @@ function Contact() {
                 <div className="bdm-contact-details">
                   <h3>{t.contact.address}</h3>
                   <p>
-                    7/B, 3802 Street, Kultur District
+                    {t.contact.addressText.line1}
                     <br />
-                    Kepez, Antalya, Turkey
+                    {t.contact.addressText.line2}
                   </p>
                 </div>
               </div>

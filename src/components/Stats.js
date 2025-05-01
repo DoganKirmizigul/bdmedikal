@@ -11,8 +11,8 @@ const Stats = () => {
   const statsRef = useRef(null);
 
   const experienceCount = useCountUp(isVisible ? "25" : "0");
-  const casesCount = useCountUp(isVisible ? "1000" : "0");
-  const productsCount = useCountUp(isVisible ? "50" : "0");
+  const casesCount = useCountUp(isVisible ? "10000" : "0");
+  const productsCount = useCountUp(isVisible ? "1000" : "0");
   const hospitalsCount = useCountUp(isVisible ? "100" : "0");
 
   useEffect(() => {

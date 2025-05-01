@@ -15,7 +15,7 @@ export const en = {
     title: "Your Trusted Partner in Healthcare",
     subtitle: "Innovative Medical Technologies",
     description:
-      "With over 25 years of experience and support for more than 1,000 successful cases, we provide innovative solutions to the healthcare industry.",
+      "With over 25 years of experience and support for more than 10,000 successful cases, we provide innovative solutions to the healthcare industry.",
     ctaButton: "Contact Us",
     exploreButton: "Explore Products",
   },
@@ -50,11 +50,11 @@ export const en = {
       text: "Years Experience",
     },
     cases: {
-      number: "1000+",
+      number: "10000+",
       text: "Cases Supported",
     },
     products: {
-      number: "50+",
+      number: "1000+",
       text: "Product Types",
     },
     hospitals: {
@@ -95,6 +95,10 @@ export const en = {
   contact: {
     phone: "Phone",
     address: "Address",
+    addressText: {
+      line1: "7/B, 3802 Street, Kultur District",
+      line2: "Kepez, Antalya, Turkey",
+    },
     form: {
       name: "Full Name",
       email: "Email Address",
