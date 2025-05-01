@@ -28,7 +28,7 @@ export const tr = {
         text: "Yıllık Deneyim",
       },
       projects: {
-        number: "1000+",
+        number: "10000+",
         text: "Başarılı Proje",
       },
     },

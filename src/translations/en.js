@@ -28,7 +28,7 @@ export const en = {
         text: "Years Experience",
       },
       projects: {
-        number: "1000+",
+        number: "10000+",
         text: "Successful Projects",
       },
     },
