@@ -12,7 +12,7 @@ export const tr = {
     subtitle: "Sağlık Çözümleri",
   },
   hero: {
-    title: "Sağlık Sektöründe Güvenilir Çözüm Ortağınız",
+    title: "Sağlık Sektöründe Lider Medikal Teknoloji Şirketi",
     subtitle: "Yenilikçi Medikal Teknolojileri",
     description:
       "25 yılı aşkın deneyimimiz ve 10000'den fazla başarılı vaka desteğimiz ile sağlık sektörüne yenilikçi çözümler sunuyoruz.",

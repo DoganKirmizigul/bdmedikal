@@ -12,7 +12,7 @@ export const en = {
     subtitle: "Healthcare Solutions",
   },
   hero: {
-    title: "Your Trusted Partner in Healthcare",
+    title: "Leading Medical Technology Company in Healthcare",
     subtitle: "Innovative Medical Technologies",
     description:
       "With over 25 years of experience and support for more than 10,000 successful cases, we provide innovative solutions to the healthcare industry.",
