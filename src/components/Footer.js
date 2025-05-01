@@ -26,28 +26,10 @@ const Footer = () => {
               <Link to="/hakkimizda">{t.nav.about}</Link>
             </li>
             <li>
-              <Link to="/teknoloji">{t.footer.quickLinks.technology}</Link>
-            </li>
-            <li>
               <Link to="/urunler">{t.nav.products}</Link>
             </li>
             <li>
               <Link to="/iletisim">{t.nav.contact}</Link>
-            </li>
-          </ul>
-        </div>
-
-        <div className="footer-section">
-          <h4>{t.footer.products.title}</h4>
-          <ul className="footer-links">
-            <li>
-              <Link to="/urunler/proender">Proender®</Link>
-            </li>
-            <li>
-              <Link to="/urunler/perdenser">Perdenser™</Link>
-            </li>
-            <li>
-              <Link to="/urunler/freepass">Freepass®</Link>
             </li>
           </ul>
         </div>
