@@ -25,13 +25,17 @@ function Contact() {
       [e.target.name]: e.target.value,
     });
   };
-
   const handleSubmit = async (e) => {
     e.preventDefault();
     setIsSubmitting(true);
 
     try {
-      const response = await fetch("http://localhost:3001/api/send-email", {
+      const apiUrl =
+        process.env.NODE_ENV === "production"
+          ? "https://bdmedikal.onrender.com/api/send-email"
+          : "http://localhost:3001/api/send-email";
+
+      const response = await fetch(apiUrl, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
