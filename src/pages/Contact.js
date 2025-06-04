@@ -6,6 +6,7 @@ import { tr } from "../translations/tr";
 import { en } from "../translations/en";
 import "../styles/ContactPage.css";
 import contactPattern from "../assets/contact-pattern.svg";
+import { toast } from "react-toastify";
 
 function Contact() {
   const { language } = useLanguage();
@@ -16,6 +17,7 @@ function Contact() {
     subject: "",
     message: "",
   });
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   const handleChange = (e) => {
     setFormData({
@@ -24,10 +26,49 @@ function Contact() {
     });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // Form submission logic here
-    console.log(formData);
+    setIsSubmitting(true);
+
+    try {
+      const response = await fetch("http://localhost:3001/api/send-email", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+
+      const data = await response.json();
+
+      if (response.ok) {
+        toast.success(
+          language === "tr"
+            ? "Mesajınız başarıyla gönderildi!"
+            : "Your message has been sent successfully!"
+        );
+        setFormData({
+          name: "",
+          email: "",
+          subject: "",
+          message: "",
+        });
+      } else {
+        toast.error(
+          language === "tr"
+            ? "Mesaj gönderilirken bir hata oluştu: " + data.error
+            : "An error occurred while sending the message: " + data.error
+        );
+      }
+    } catch (error) {
+      toast.error(
+        language === "tr"
+          ? "Bir hata oluştu: " + error.message
+          : "An error occurred: " + error.message
+      );
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -141,6 +182,7 @@ function Contact() {
                   value={formData.name}
                   onChange={handleChange}
                   required
+                  disabled={isSubmitting}
                 />
               </div>
               <div className="form-group">
@@ -151,6 +193,7 @@ function Contact() {
                   value={formData.email}
                   onChange={handleChange}
                   required
+                  disabled={isSubmitting}
                 />
               </div>
               <div className="form-group">
@@ -161,6 +204,7 @@ function Contact() {
                   value={formData.subject}
                   onChange={handleChange}
                   required
+                  disabled={isSubmitting}
                 />
               </div>
               <div className="form-group message-group">
@@ -171,10 +215,19 @@ function Contact() {
                   onChange={handleChange}
                   required
                   rows="8"
+                  disabled={isSubmitting}
                 ></textarea>
               </div>
-              <button type="submit" className="bdm-submit-button">
-                {t.contact.form.submit}
+              <button
+                type="submit"
+                className="bdm-submit-button"
+                disabled={isSubmitting}
+              >
+                {isSubmitting
+                  ? language === "tr"
+                    ? "Gönderiliyor..."
+                    : "Sending..."
+                  : t.contact.form.submit}
               </button>
             </form>
           </motion.div>
