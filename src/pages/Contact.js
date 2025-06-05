@@ -27,14 +27,14 @@ function Contact() {
   };
   const handleSubmit = async (e) => {
     e.preventDefault();
+    console.log("Form submit başladı");
+    console.log("NODE_ENV:", process.env.NODE_ENV);
     setIsSubmitting(true);
 
     try {
-      const apiUrl =
-        process.env.NODE_ENV === "production"
-          ? "https://bdmedikal.onrender.com/api/send-email"
-          : "http://localhost:3001/api/send-email";
+      const apiUrl = "https://bdmedikal.onrender.com/api/send-email";
 
+      console.log("Form verisi:", formData);
       console.log("API URL:", apiUrl);
 
       const response = await fetch(apiUrl, {
@@ -232,6 +232,7 @@ function Contact() {
                 type="submit"
                 className="bdm-submit-button"
                 disabled={isSubmitting}
+                onClick={() => console.log("Submit butonuna tıklandı")}
               >
                 {isSubmitting
                   ? language === "tr"
