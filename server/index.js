@@ -10,6 +10,7 @@ app.use(
     origin: ["https://www.bdmedikal.com", "http://localhost:3000"],
     methods: ["POST", "OPTIONS"],
     allowedHeaders: ["Content-Type"],
+    credentials: true,
   })
 );
 app.use(express.json());
