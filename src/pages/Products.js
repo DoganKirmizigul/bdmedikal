@@ -83,6 +83,11 @@ const Products = () => {
       logo: "https://chemosat.com/assets/img/chemosat-logo.svg",
       url: "https://chemosat.com",
     },
+    {
+      name: "Mavera",
+      logo: "https://www.maveramedical.com.tr/album/maveramedical/sayfalar/1626096868-XCxox.png",
+      url: "https://www.maveramedical.com.tr",
+    },
   ];
 
   return (
