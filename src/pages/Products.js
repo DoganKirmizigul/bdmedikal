@@ -84,7 +84,7 @@ const Products = () => {
       url: "https://chemosat.com",
     },
     {
-      name: "Mavera",
+      name: "Mavera Medical",
       logo: "https://www.maveramedical.com.tr/album/maveramedical/sayfalar/1626096868-XCxox.png",
       url: "https://www.maveramedical.com.tr",
     },
