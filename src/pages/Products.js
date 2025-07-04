@@ -85,7 +85,7 @@ const Products = () => {
     },
     {
       name: "Mavera Medical",
-      logo: "https://www.maveramedical.com.tr/album/maveramedical/sayfalar/1626096868-XCxox.png",
+      logo: "https://www.maveramedical.com.tr/album/maveramedical/sayfalar/1626096868-XCxox.png?v=1",
       url: "https://www.maveramedical.com.tr",
     },
   ];
