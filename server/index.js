@@ -1,4 +1,5 @@
 const express = require("express");
+const path = require("path");
 const nodemailer = require("nodemailer");
 const cors = require("cors");
 require("dotenv").config();
@@ -14,6 +15,26 @@ app.use(
   })
 );
 app.use(express.json());
+
+// Serve static build files (if present) and handle SPA routing.
+// This makes requests like `/index.html` or unknown paths return the app's index.html
+const buildPath = path.join(__dirname, "..", "build");
+app.use(express.static(buildPath));
+
+// Redirect explicit /index.html requests to root so client-side router shows Home
+app.get("/index.html", (req, res) => {
+  return res.redirect(301, "/");
+});
+
+// For SPA client-side routing: serve index.html for all other GET requests
+app.get("*", (req, res) => {
+  if (req.method !== "GET") return res.status(405).end();
+  res.sendFile(path.join(buildPath, "index.html"), (err) => {
+    if (err) {
+      res.status(500).send(err.message);
+    }
+  });
+});
 
 const transporter = nodemailer.createTransport({
   service: "gmail",
